@@ -6,14 +6,23 @@
 
   <title>ENSAMTECH | Información bancaria</title>
 
-  <!-- Vista previa para WhatsApp -->
+  <!-- Open Graph: WhatsApp / Facebook -->
   <meta property="og:title" content="ENSAMTECH | Información bancaria">
   <meta property="og:description" content="Copia nuestros datos bancarios de forma rápida y segura.">
-  <meta property="og:image" content="https://ensamtech.github.io/ensamtech-pagos/preview.png">
-  <meta property="og:url" content="https://ensamtech.github.io/ensamtech-pagos/">
+  <meta property="og:image" content="https://ensamtech.github.io/-emsamtech-pagos/preview.png">
+  <meta property="og:image:secure_url" content="https://ensamtech.github.io/-emsamtech-pagos/preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://ensamtech.github.io/-emsamtech-pagos/">
   <meta property="og:type" content="website">
 
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ENSAMTECH | Información bancaria">
+  <meta name="twitter:description" content="Copia nuestros datos bancarios de forma rápida y segura.">
+  <meta name="twitter:image" content="https://ensamtech.github.io/-emsamtech-pagos/preview.png">
+
   <meta name="theme-color" content="#07192d">
 
   <style>
@@ -76,8 +85,8 @@
       gap: 12px;
       margin-bottom: 22px;
       padding: 15px 17px;
-      background: rgba(255,255,255,0.055);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 18px;
     }
 
@@ -90,6 +99,7 @@
       justify-content: center;
       background: rgba(28, 143, 255, 0.13);
       font-size: 20px;
+      flex-shrink: 0;
     }
 
     .security strong {
@@ -121,9 +131,9 @@
     .account-card {
       padding: 20px;
       border-radius: 22px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.09);
-      box-shadow: 0 15px 45px rgba(0,0,0,0.18);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
       backdrop-filter: blur(12px);
     }
 
@@ -214,11 +224,11 @@
       font-weight: 700;
       font-size: 13px;
       cursor: pointer;
-      transition: transform .15s ease;
+      transition: transform 0.15s ease;
     }
 
     .copy-btn:active {
-      transform: scale(.94);
+      transform: scale(0.94);
     }
 
     .footer-card {
@@ -226,8 +236,8 @@
       text-align: center;
       padding: 18px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .footer-card strong {
@@ -261,10 +271,10 @@
       padding: 12px 17px;
       font-size: 13px;
       font-weight: 750;
-      box-shadow: 0 15px 45px rgba(0,0,0,0.35);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
       opacity: 0;
       pointer-events: none;
-      transition: .25s ease;
+      transition: 0.25s ease;
       white-space: nowrap;
       z-index: 999;
     }
@@ -297,18 +307,12 @@
 
     <header class="header">
       <div class="logo">E</div>
-
       <h1>ENSAMTECH</h1>
-
       <p>Información bancaria oficial</p>
     </header>
 
-
     <div class="security">
-
-      <div class="security-icon">
-        🛡️
-      </div>
+      <div class="security-icon">🛡️</div>
 
       <div>
         <strong>Transfiere con confianza</strong>
@@ -316,170 +320,108 @@
           Copia los datos directamente para evitar errores al realizar tu transferencia.
         </span>
       </div>
-
     </div>
 
-
-    <p class="section-title">
-      Selecciona una cuenta
-    </p>
-
+    <p class="section-title">Selecciona una cuenta</p>
 
     <div class="accounts">
 
-      <!-- POPULAR -->
+      <!-- BANCO POPULAR -->
       <div class="account-card">
 
         <div class="bank-header">
-
-          <div class="bank-icon popular">
-            P
-          </div>
+          <div class="bank-icon popular">P</div>
 
           <div class="bank-info">
             <h2>Banco Popular</h2>
-            <span>Cuenta bancaria</span>
+            <span>Cuenta de ahorro</span>
           </div>
-
         </div>
 
+        <div class="label">Titular</div>
+        <div class="holder">Johan Agramonte Gil</div>
 
-        <div class="label">
-          Titular
-        </div>
-
-        <div class="holder">
-          Johan Agramonte Gil
-        </div>
-
-
-        <div class="label">
-          Número de cuenta
-        </div>
+        <div class="label">Número de cuenta</div>
 
         <div class="number-row">
-
-          <div class="account-number">
-            827271610
-          </div>
+          <div class="account-number">827271610</div>
 
           <button
             class="copy-btn"
             onclick="copiarCuenta('827271610', 'Popular')">
             ⧉ Copiar
           </button>
-
         </div>
 
       </div>
-
 
       <!-- SCOTIABANK -->
       <div class="account-card">
 
         <div class="bank-header">
-
-          <div class="bank-icon scotia">
-            S
-          </div>
+          <div class="bank-icon scotia">S</div>
 
           <div class="bank-info">
             <h2>Scotiabank</h2>
             <span>Cuenta bancaria</span>
           </div>
-
         </div>
 
+        <div class="label">Titular</div>
+        <div class="holder">Johan Agramonte Gil</div>
 
-        <div class="label">
-          Titular
-        </div>
-
-        <div class="holder">
-          Johan Agramonte Gil
-        </div>
-
-
-        <div class="label">
-          Número de cuenta
-        </div>
+        <div class="label">Número de cuenta</div>
 
         <div class="number-row">
-
-          <div class="account-number">
-            0000000000
-          </div>
+          <div class="account-number">0000000000</div>
 
           <button
             class="copy-btn"
             onclick="copiarCuenta('0000000000', 'Scotiabank')">
             ⧉ Copiar
           </button>
-
         </div>
 
       </div>
-
 
       <!-- QIK -->
       <div class="account-card">
 
         <div class="bank-header">
-
-          <div class="bank-icon qik">
-            Q
-          </div>
+          <div class="bank-icon qik">Q</div>
 
           <div class="bank-info">
             <h2>Qik</h2>
             <span>Cuenta digital</span>
           </div>
-
         </div>
 
+        <div class="label">Titular</div>
+        <div class="holder">Johan Agramonte Gil</div>
 
-        <div class="label">
-          Titular
-        </div>
-
-        <div class="holder">
-          Johan Agramonte Gil
-        </div>
-
-
-        <div class="label">
-          Número de cuenta
-        </div>
+        <div class="label">Número de cuenta</div>
 
         <div class="number-row">
-
-          <div class="account-number">
-            0000000000
-          </div>
+          <div class="account-number">0000000000</div>
 
           <button
             class="copy-btn"
             onclick="copiarCuenta('0000000000', 'Qik')">
             ⧉ Copiar
           </button>
-
         </div>
 
       </div>
 
     </div>
 
-
     <div class="footer-card">
-
       <strong>🔒 Datos oficiales de ENSAMTECH</strong>
 
       <p>
         Verifica siempre el nombre del titular antes de completar una transferencia.
       </p>
-
     </div>
-
 
     <div class="footer">
       © 2026 ENSAMTECH
@@ -487,17 +429,14 @@
 
   </div>
 
-
   <div id="toast" class="toast">
     ✓ Cuenta copiada
   </div>
-
 
   <script>
     async function copiarCuenta(numero, banco) {
 
       try {
-
         await navigator.clipboard.writeText(numero);
 
       } catch (error) {
@@ -508,7 +447,6 @@
         document.body.appendChild(input);
 
         input.select();
-
         document.execCommand("copy");
 
         document.body.removeChild(input);
@@ -517,21 +455,17 @@
       mostrarMensaje("✓ Cuenta de " + banco + " copiada");
     }
 
-
     function mostrarMensaje(mensaje) {
 
       const toast = document.getElementById("toast");
 
       toast.textContent = mensaje;
-
       toast.classList.add("show");
 
       clearTimeout(window.toastTimeout);
 
       window.toastTimeout = setTimeout(function() {
-
         toast.classList.remove("show");
-
       }, 2000);
     }
   </script>
