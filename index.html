@@ -6,8 +6,9 @@
 
   <title>ENSAMTECH | Información bancaria</title>
 
+  <!-- WhatsApp / Facebook -->
   <meta property="og:title" content="ENSAMTECH | Información bancaria">
-  <meta property="og:description" content="Copia nuestros datos bancarios de forma rápida y segura.">
+  <meta property="og:description" content="Copia nuestras cuentas bancarias de forma rápida y segura.">
   <meta property="og:image" content="https://ensamtech.github.io/-emsamtech-pagos/preview.png">
   <meta property="og:image:secure_url" content="https://ensamtech.github.io/-emsamtech-pagos/preview.png">
   <meta property="og:image:type" content="image/png">
@@ -17,8 +18,6 @@
   <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ENSAMTECH | Información bancaria">
-  <meta name="twitter:description" content="Copia nuestros datos bancarios de forma rápida y segura.">
   <meta name="twitter:image" content="https://ensamtech.github.io/-emsamtech-pagos/preview.png">
 
   <meta name="theme-color" content="#111111">
@@ -30,49 +29,72 @@
     }
 
     :root {
-      --red: #e31b23;
-      --black: #111111;
-      --gray: #6e6e73;
-      --border: #e4e4e7;
+      --ensam-red: #e31b23;
+      --ensam-black: #111111;
+      --gray: #77777c;
       --white: #ffffff;
     }
 
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      color: #111;
+
       background:
-        radial-gradient(circle at top right, rgba(227, 27, 35, 0.08), transparent 32%),
-        linear-gradient(180deg, #f7f7f8 0%, #eeeeef 100%);
-      color: var(--black);
-      padding: 24px 16px 40px;
+        radial-gradient(
+          circle at top right,
+          rgba(227, 27, 35, .08),
+          transparent 30%
+        ),
+        linear-gradient(
+          180deg,
+          #fafafa 0%,
+          #f0f0f2 100%
+        );
+
+      padding: 24px 16px 42px;
     }
 
     .container {
       width: 100%;
       max-width: 480px;
-      margin: 0 auto;
+      margin: auto;
     }
+
+
+    /* =========================
+       ENCABEZADO
+    ========================== */
 
     .header {
       text-align: center;
-      margin: 8px 0 25px;
+      margin: 5px 0 28px;
     }
 
     .brand-logo {
-      width: 135px;
-      height: 135px;
-      margin: 0 auto 14px;
+      width: 125px;
+      height: 125px;
+
+      margin: 0 auto 13px;
+
       border-radius: 50%;
       overflow: hidden;
-      background: #ffffff;
-      border: 4px solid #ffffff;
+
+      background: #fff;
+
+      border: 4px solid #fff;
+
       box-shadow:
-        0 12px 30px rgba(227, 27, 35, 0.12),
-        0 8px 20px rgba(0,0,0,0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        0 12px 30px rgba(0, 0, 0, .10),
+        0 5px 18px rgba(227, 27, 35, .10);
     }
 
     .brand-logo img {
@@ -84,439 +106,860 @@
 
     .header h1 {
       margin: 0;
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
+
+      font-size: 29px;
+      font-weight: 900;
+
+      letter-spacing: 1px;
     }
 
     .header h1 span {
-      color: var(--red);
+      color: var(--ensam-red);
     }
 
     .header p {
-      margin: 6px 0 0;
-      color: var(--gray);
+      margin: 7px 0 0;
+
+      color: #737378;
       font-size: 14px;
     }
+
+
+    /* =========================
+       AVISO DE SEGURIDAD
+    ========================== */
 
     .security {
       display: flex;
       align-items: center;
-      gap: 12px;
-      padding: 15px;
-      margin-bottom: 22px;
-      border-radius: 18px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      gap: 13px;
+
+      padding: 16px;
+
+      margin-bottom: 24px;
+
+      border-radius: 20px;
+
+      background: #fff;
+
+      border: 1px solid #e7e7e9;
+
+      box-shadow:
+        0 10px 28px rgba(0, 0, 0, .05);
     }
 
     .security-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      background: rgba(227,27,35,0.10);
+      width: 46px;
+      height: 46px;
+
+      flex-shrink: 0;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
-      font-size: 20px;
+
+      border-radius: 15px;
+
+      background: rgba(227, 27, 35, .10);
+
+      font-size: 21px;
     }
 
     .security strong {
       display: block;
-      font-size: 14px;
+
       margin-bottom: 3px;
+
+      font-size: 14px;
     }
 
     .security span {
       display: block;
-      color: var(--gray);
+
+      color: #77777c;
+
       font-size: 12px;
       line-height: 1.4;
     }
 
+
     .section-title {
-      margin: 0 0 12px;
+      margin: 0 0 14px;
+
+      color: #77777c;
+
       font-size: 12px;
-      color: var(--gray);
+      font-weight: 800;
+
+      letter-spacing: 1.6px;
+
       text-transform: uppercase;
-      letter-spacing: 1.3px;
-      font-weight: 700;
     }
+
+
+    /* =========================
+       TARJETAS BANCARIAS
+    ========================== */
 
     .accounts {
       display: grid;
-      gap: 14px;
+      gap: 18px;
     }
 
-    .account-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 19px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.055);
+    .bank-card {
       position: relative;
+
       overflow: hidden;
+
+      min-height: 300px;
+
+      padding: 24px 22px;
+
+      border-radius: 27px;
+
+      color: #fff;
+
+      box-shadow:
+        0 18px 38px rgba(0,0,0,.15);
     }
 
-    .account-card::before {
+
+    /* decoración detrás */
+
+    .bank-card::before,
+    .bank-card::after {
       content: "";
+
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 5px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(255,255,255,.08);
+    }
+
+    .bank-card::before {
+      width: 190px;
+      height: 190px;
+
+      right: -65px;
+      top: -80px;
+    }
+
+    .bank-card::after {
+      width: 130px;
+      height: 130px;
+
+      left: -55px;
+      bottom: -60px;
+    }
+
+
+    /* POPULAR */
+
+    .popular-card {
+      background:
+        radial-gradient(
+          circle at 80% 10%,
+          rgba(0,190,255,.35),
+          transparent 38%
+        ),
+        linear-gradient(
+          145deg,
+          #003c8f 0%,
+          #0067c8 55%,
+          #009ee2 100%
+        );
+    }
+
+
+    /* SCOTIABANK */
+
+    .scotia-card {
+      background:
+        radial-gradient(
+          circle at 80% 10%,
+          rgba(255,255,255,.18),
+          transparent 36%
+        ),
+        linear-gradient(
+          145deg,
+          #b00018 0%,
+          #e31837 55%,
+          #ff334f 100%
+        );
+    }
+
+
+    /* QIK */
+
+    .qik-card {
+      background:
+        radial-gradient(
+          circle at 80% 10%,
+          rgba(0,180,255,.28),
+          transparent 38%
+        ),
+        linear-gradient(
+          145deg,
+          #071d4c 0%,
+          #123f91 55%,
+          #176ed6 100%
+        );
+    }
+
+
+    /* CONTENIDO */
+
+    .bank-content {
+      position: relative;
+      z-index: 2;
+
       height: 100%;
-      background: var(--red);
-    }
 
-    .bank-header {
       display: flex;
+      flex-direction: column;
+
       align-items: center;
-      gap: 13px;
-      margin-bottom: 19px;
+
+      text-align: center;
     }
 
-    .bank-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 15px;
-      background: #fff;
-      border: 1px solid #eeeeef;
+
+    /* LOGO DEL BANCO */
+
+    .bank-logo {
+      width: 95px;
+      height: 95px;
+
+      margin-bottom: 16px;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 7px;
+
+      padding: 12px;
+
+      border-radius: 24px;
+
+      background:
+        rgba(255,255,255,.96);
+
+      box-shadow:
+        0 10px 25px rgba(0,0,0,.15);
+
       overflow: hidden;
-      flex-shrink: 0;
     }
 
-    .bank-icon img {
+    .bank-logo img {
       width: 100%;
       height: 100%;
+
       object-fit: contain;
+
       display: block;
     }
 
-    .bank-info h2 {
+
+    .bank-name {
       margin: 0;
-      font-size: 18px;
-      color: var(--black);
+
+      font-size: 23px;
+      font-weight: 800;
     }
 
-    .bank-info span {
-      display: block;
-      margin-top: 4px;
-      color: var(--gray);
-      font-size: 12px;
+    .account-type {
+      margin-top: 5px;
+
+      color: rgba(255,255,255,.78);
+
+      font-size: 13px;
     }
 
-    .label {
-      margin-bottom: 5px;
-      color: #8a8a8f;
+
+    /* NÚMERO */
+
+    .account-label {
+      margin-top: 25px;
+
       font-size: 10px;
       font-weight: 700;
+
+      letter-spacing: 1.6px;
+
       text-transform: uppercase;
-      letter-spacing: 1px;
-    }
 
-    .holder {
-      margin-bottom: 17px;
-      color: #333336;
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .number-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      color: rgba(255,255,255,.68);
     }
 
     .account-number {
-      flex: 1;
-      min-width: 0;
-      color: var(--black);
-      font-size: 23px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
-      overflow-wrap: anywhere;
+      margin-top: 7px;
+
+      font-size: 31px;
+      font-weight: 900;
+
+      letter-spacing: 1.5px;
+
+      word-break: break-word;
     }
 
-    .copy-btn {
-      min-width: 96px;
-      height: 46px;
-      padding: 0 15px;
-      border: none;
-      border-radius: 14px;
-      background: var(--black);
-      color: var(--white);
+
+    /* TITULAR */
+
+    .holder {
+      margin-top: 8px;
+
+      color: rgba(255,255,255,.82);
+
       font-size: 13px;
-      font-weight: 750;
+    }
+
+
+    /* BOTÓN */
+
+    .copy-btn {
+      width: 100%;
+
+      min-height: 50px;
+
+      margin-top: 22px;
+
+      border: none;
+
+      border-radius: 16px;
+
+      background: #fff;
+
+      color: #111;
+
+      font-size: 14px;
+      font-weight: 800;
+
       cursor: pointer;
-      transition: transform .15s ease, background .15s ease;
+
+      box-shadow:
+        0 9px 20px rgba(0,0,0,.13);
+
+      transition:
+        transform .15s ease,
+        opacity .15s ease;
     }
 
     .copy-btn:active {
-      transform: scale(.95);
-      background: var(--red);
+      transform: scale(.96);
+      opacity: .88;
     }
 
-    .footer-card {
-      margin-top: 21px;
-      padding: 18px;
+
+    /* =========================
+       CONFIANZA
+    ========================== */
+
+    .trust {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 8px;
+
+      margin-top: 25px;
+    }
+
+    .trust-item {
+      padding: 14px 7px;
+
       text-align: center;
-      background: #18181a;
-      color: #fff;
-      border-radius: 18px;
+
+      background: #fff;
+
+      border: 1px solid #e5e5e7;
+
+      border-radius: 17px;
+
+      box-shadow:
+        0 7px 18px rgba(0,0,0,.04);
     }
 
-    .footer-card strong {
+    .trust-icon {
       display: block;
+
       margin-bottom: 6px;
-      font-size: 14px;
+
+      font-size: 20px;
     }
 
-    .footer-card strong span {
-      color: #ff434b;
-    }
+    .trust-item strong {
+      display: block;
 
-    .footer-card p {
-      margin: 0;
-      color: #a9a9ad;
-      font-size: 12px;
-      line-height: 1.5;
-    }
-
-    .footer {
-      margin-top: 20px;
-      text-align: center;
-      color: #8b8b90;
       font-size: 11px;
     }
 
+    .trust-item span {
+      display: block;
+
+      margin-top: 3px;
+
+      color: #88888d;
+
+      font-size: 9px;
+      line-height: 1.25;
+    }
+
+
+    /* =========================
+       PIE
+    ========================== */
+
+    .footer {
+      margin-top: 24px;
+
+      text-align: center;
+
+      color: #88888d;
+
+      font-size: 11px;
+    }
+
+    .footer strong {
+      color: #333;
+    }
+
+
+    /* =========================
+       MENSAJE AL COPIAR
+    ========================== */
+
     .toast {
       position: fixed;
+
       left: 50%;
       bottom: 25px;
-      transform: translate(-50%, 25px);
-      background: var(--black);
-      color: var(--white);
-      padding: 12px 17px;
+
+      transform:
+        translate(-50%, 25px);
+
+      padding: 13px 18px;
+
       border-radius: 14px;
+
+      background: #111;
+      color: #fff;
+
       font-size: 13px;
       font-weight: 750;
-      box-shadow: 0 14px 40px rgba(0,0,0,.25);
+
+      box-shadow:
+        0 15px 40px rgba(0,0,0,.30);
+
       opacity: 0;
+
       pointer-events: none;
+
       transition: .25s ease;
+
       white-space: nowrap;
+
       z-index: 999;
     }
 
     .toast.show {
       opacity: 1;
-      transform: translate(-50%, 0);
+
+      transform:
+        translate(-50%, 0);
     }
 
+
     @media (max-width: 370px) {
+
       .brand-logo {
-        width: 118px;
-        height: 118px;
+        width: 110px;
+        height: 110px;
+      }
+
+      .bank-logo {
+        width: 82px;
+        height: 82px;
       }
 
       .account-number {
-        font-size: 20px;
+        font-size: 27px;
       }
 
-      .copy-btn {
-        min-width: 82px;
-        padding: 0 11px;
+      .bank-card {
+        padding:
+          22px 18px;
       }
 
-      .account-card {
-        padding: 17px;
-      }
-
-      .bank-icon {
-        width: 52px;
-        height: 52px;
-      }
     }
   </style>
 </head>
 
+
 <body>
 
-  <div class="container">
+  <main class="container">
+
+
+    <!-- ENCABEZADO -->
 
     <header class="header">
 
       <div class="brand-logo">
-        <img src="logo.png" alt="ENSAMTECH">
+        <img
+          src="logo.png"
+          alt="ENSAMTECH">
       </div>
 
-      <h1>ENSAM<span>TECH</span></h1>
-      <p>Información bancaria oficial</p>
+      <h1>
+        ENSAM<span>TECH</span>
+      </h1>
+
+      <p>
+        Información bancaria oficial
+      </p>
 
     </header>
 
-    <div class="security">
-      <div class="security-icon">🛡️</div>
+
+    <!-- SEGURIDAD -->
+
+    <section class="security">
+
+      <div class="security-icon">
+        🛡️
+      </div>
 
       <div>
-        <strong>Transfiere con confianza</strong>
-        <span>Copia los datos directamente para evitar errores al realizar tu transferencia.</span>
+
+        <strong>
+          Transfiere con confianza
+        </strong>
+
+        <span>
+          Selecciona tu banco y copia el número
+          directamente para evitar errores.
+        </span>
+
       </div>
-    </div>
 
-    <p class="section-title">Selecciona una cuenta</p>
+    </section>
 
-    <div class="accounts">
 
-      <div class="account-card">
+    <p class="section-title">
+      Selecciona una cuenta
+    </p>
 
-        <div class="bank-header">
 
-          <div class="bank-icon">
-            <img src="popular.png" alt="Banco Popular">
+    <section class="accounts">
+
+
+      <!-- =====================
+           BANCO POPULAR
+      ====================== -->
+
+      <article class="bank-card popular-card">
+
+        <div class="bank-content">
+
+          <div class="bank-logo">
+
+            <img
+              src="popular.png"
+              alt="Banco Popular">
+
           </div>
 
-          <div class="bank-info">
-            <h2>Banco Popular</h2>
-            <span>Cuenta de ahorro</span>
+          <h2 class="bank-name">
+            Banco Popular
+          </h2>
+
+          <div class="account-type">
+            Cuenta de ahorro
           </div>
 
-        </div>
 
-        <div class="label">Titular</div>
-        <div class="holder">Johan Agramonte Gil</div>
+          <div class="account-label">
+            Número de cuenta
+          </div>
 
-        <div class="label">Número de cuenta</div>
+          <div class="account-number">
+            827271610
+          </div>
 
-        <div class="number-row">
+          <div class="holder">
+            Johan Agramonte Gil
+          </div>
 
-          <div class="account-number">827271610</div>
 
           <button
             class="copy-btn"
-            onclick="copiarCuenta('827271610', 'Banco Popular')">
-            ⧉ Copiar
+            onclick="copiarCuenta(
+              '827271610',
+              'Banco Popular'
+            )">
+
+            ⧉ Copiar cuenta
+
           </button>
 
         </div>
 
-      </div>
+      </article>
 
-      <div class="account-card">
 
-        <div class="bank-header">
 
-          <div class="bank-icon">
-            <img src="scotiabank.png" alt="Scotiabank">
+      <!-- =====================
+           SCOTIABANK
+      ====================== -->
+
+      <article class="bank-card scotia-card">
+
+        <div class="bank-content">
+
+          <div class="bank-logo">
+
+            <img
+              src="scotiabank.png"
+              alt="Scotiabank">
+
           </div>
 
-          <div class="bank-info">
-            <h2>Scotiabank</h2>
-            <span>Cuenta bancaria</span>
+          <h2 class="bank-name">
+            Scotiabank
+          </h2>
+
+          <div class="account-type">
+            Cuenta bancaria
           </div>
 
-        </div>
 
-        <div class="label">Titular</div>
-        <div class="holder">Johan Agramonte Gil</div>
+          <div class="account-label">
+            Número de cuenta
+          </div>
 
-        <div class="label">Número de cuenta</div>
+          <div class="account-number">
+            0000000000
+          </div>
 
-        <div class="number-row">
+          <div class="holder">
+            Johan Agramonte Gil
+          </div>
 
-          <div class="account-number">0000000000</div>
 
           <button
             class="copy-btn"
-            onclick="copiarCuenta('0000000000', 'Scotiabank')">
-            ⧉ Copiar
+            onclick="copiarCuenta(
+              '0000000000',
+              'Scotiabank'
+            )">
+
+            ⧉ Copiar cuenta
+
           </button>
 
         </div>
 
-      </div>
+      </article>
 
-      <div class="account-card">
 
-        <div class="bank-header">
 
-          <div class="bank-icon">
-            <img src="qik.png" alt="Qik">
+      <!-- =====================
+           QIK
+      ====================== -->
+
+      <article class="bank-card qik-card">
+
+        <div class="bank-content">
+
+          <div class="bank-logo">
+
+            <img
+              src="qik.png"
+              alt="Qik">
+
           </div>
 
-          <div class="bank-info">
-            <h2>Qik</h2>
-            <span>Cuenta digital</span>
+          <h2 class="bank-name">
+            Qik
+          </h2>
+
+          <div class="account-type">
+            Cuenta digital
           </div>
 
-        </div>
 
-        <div class="label">Titular</div>
-        <div class="holder">Johan Agramonte Gil</div>
+          <div class="account-label">
+            Número de cuenta
+          </div>
 
-        <div class="label">Número de cuenta</div>
+          <div class="account-number">
+            0000000000
+          </div>
 
-        <div class="number-row">
+          <div class="holder">
+            Johan Agramonte Gil
+          </div>
 
-          <div class="account-number">0000000000</div>
 
           <button
             class="copy-btn"
-            onclick="copiarCuenta('0000000000', 'Qik')">
-            ⧉ Copiar
+            onclick="copiarCuenta(
+              '0000000000',
+              'Qik'
+            )">
+
+            ⧉ Copiar cuenta
+
           </button>
 
         </div>
 
+      </article>
+
+    </section>
+
+
+
+    <!-- CONFIANZA -->
+
+    <section class="trust">
+
+      <div class="trust-item">
+
+        <span class="trust-icon">
+          🔒
+        </span>
+
+        <strong>
+          Seguro
+        </strong>
+
+        <span>
+          Datos oficiales
+        </span>
+
       </div>
 
-    </div>
 
-    <div class="footer-card">
-      <strong>🔒 Datos oficiales de <span>ENSAMTECH</span></strong>
-      <p>Verifica siempre el nombre del titular antes de completar una transferencia.</p>
-    </div>
+      <div class="trust-item">
 
-    <div class="footer">
+        <span class="trust-icon">
+          ✓
+        </span>
+
+        <strong>
+          Verificado
+        </strong>
+
+        <span>
+          Cuentas confirmadas
+        </span>
+
+      </div>
+
+
+      <div class="trust-item">
+
+        <span class="trust-icon">
+          ⚡
+        </span>
+
+        <strong>
+          Rápido
+        </strong>
+
+        <span>
+          Copia en un toque
+        </span>
+
+      </div>
+
+    </section>
+
+
+
+    <footer class="footer">
+
+      <strong>
+        ENSAMTECH
+      </strong>
+
+      <br>
+
+      Tecnología · Mantenimiento · Seguridad
+
+      <br><br>
+
       © 2026 ENSAMTECH
-    </div>
 
-  </div>
+    </footer>
 
-  <div id="toast" class="toast">
+  </main>
+
+
+  <div
+    id="toast"
+    class="toast">
+
     ✓ Cuenta copiada
+
   </div>
+
+
 
   <script>
+
     async function copiarCuenta(numero, banco) {
+
       try {
+
         await navigator.clipboard.writeText(numero);
+
       } catch (error) {
-        const input = document.createElement("textarea");
+
+        const input =
+          document.createElement("textarea");
+
         input.value = numero;
+
         document.body.appendChild(input);
+
         input.select();
+
         document.execCommand("copy");
+
         document.body.removeChild(input);
+
       }
 
-      const toast = document.getElementById("toast");
 
-      toast.textContent = "✓ Cuenta de " + banco + " copiada";
+      const toast =
+        document.getElementById("toast");
+
+
+      toast.textContent =
+        "✓ Cuenta de " +
+        banco +
+        " copiada";
+
+
       toast.classList.add("show");
 
-      clearTimeout(window.toastTimeout);
 
-      window.toastTimeout = setTimeout(function() {
-        toast.classList.remove("show");
-      }, 2000);
+      clearTimeout(
+        window.toastTimeout
+      );
+
+
+      window.toastTimeout =
+        setTimeout(function() {
+
+          toast.classList.remove("show");
+
+        }, 2000);
+
     }
+
   </script>
 
 </body>
