@@ -6,7 +6,6 @@
 
   <title>ENSAMTECH | Información bancaria</title>
 
-  <!-- WhatsApp / Facebook -->
   <meta property="og:title" content="ENSAMTECH | Información bancaria">
   <meta property="og:description" content="Copia nuestros datos bancarios de forma rápida y segura.">
   <meta property="og:image" content="https://ensamtech.github.io/-emsamtech-pagos/preview.png">
@@ -32,11 +31,8 @@
 
     :root {
       --red: #e31b23;
-      --red-dark: #b50f17;
       --black: #111111;
-      --dark: #1c1c1e;
       --gray: #6e6e73;
-      --light-gray: #f2f2f4;
       --border: #e4e4e7;
       --white: #ffffff;
     }
@@ -64,8 +60,8 @@
     }
 
     .brand-logo {
-      width: 128px;
-      height: 128px;
+      width: 135px;
+      height: 135px;
       margin: 0 auto 10px;
       display: flex;
       align-items: center;
@@ -195,10 +191,6 @@
       display: block;
     }
 
-    .bank-info {
-      min-width: 0;
-    }
-
     .bank-info h2 {
       margin: 0;
       font-size: 18px;
@@ -322,8 +314,8 @@
 
     @media (max-width: 370px) {
       .brand-logo {
-        width: 112px;
-        height: 112px;
+        width: 118px;
+        height: 118px;
       }
 
       .account-number {
@@ -354,7 +346,7 @@
     <header class="header">
 
       <div class="brand-logo">
-        <img src="logo.png" alt="ENSAMTECH">
+        <img src="ensamtech_logo_web.png" alt="ENSAMTECH">
       </div>
 
       <h1>ENSAM<span>TECH</span></h1>
@@ -363,25 +355,18 @@
     </header>
 
     <div class="security">
-
-      <div class="security-icon">
-        🛡️
-      </div>
+      <div class="security-icon">🛡️</div>
 
       <div>
         <strong>Transfiere con confianza</strong>
         <span>Copia los datos directamente para evitar errores al realizar tu transferencia.</span>
       </div>
-
     </div>
 
-    <p class="section-title">
-      Selecciona una cuenta
-    </p>
+    <p class="section-title">Selecciona una cuenta</p>
 
     <div class="accounts">
 
-      <!-- BANCO POPULAR -->
       <div class="account-card">
 
         <div class="bank-header">
@@ -404,9 +389,7 @@
 
         <div class="number-row">
 
-          <div class="account-number">
-            827271610
-          </div>
+          <div class="account-number">827271610</div>
 
           <button
             class="copy-btn"
@@ -418,7 +401,6 @@
 
       </div>
 
-      <!-- SCOTIABANK -->
       <div class="account-card">
 
         <div class="bank-header">
@@ -441,9 +423,7 @@
 
         <div class="number-row">
 
-          <div class="account-number">
-            0000000000
-          </div>
+          <div class="account-number">0000000000</div>
 
           <button
             class="copy-btn"
@@ -455,7 +435,6 @@
 
       </div>
 
-      <!-- QIK -->
       <div class="account-card">
 
         <div class="bank-header">
@@ -478,9 +457,7 @@
 
         <div class="number-row">
 
-          <div class="account-number">
-            0000000000
-          </div>
+          <div class="account-number">0000000000</div>
 
           <button
             class="copy-btn"
@@ -495,13 +472,8 @@
     </div>
 
     <div class="footer-card">
-
       <strong>🔒 Datos oficiales de <span>ENSAMTECH</span></strong>
-
-      <p>
-        Verifica siempre el nombre del titular antes de completar una transferencia.
-      </p>
-
+      <p>Verifica siempre el nombre del titular antes de completar una transferencia.</p>
     </div>
 
     <div class="footer">
@@ -516,32 +488,20 @@
 
   <script>
     async function copiarCuenta(numero, banco) {
-
       try {
         await navigator.clipboard.writeText(numero);
       } catch (error) {
-
         const input = document.createElement("textarea");
-
         input.value = numero;
-
         document.body.appendChild(input);
-
         input.select();
-
         document.execCommand("copy");
-
         document.body.removeChild(input);
       }
 
-      mostrarMensaje("✓ Cuenta de " + banco + " copiada");
-    }
-
-    function mostrarMensaje(mensaje) {
-
       const toast = document.getElementById("toast");
 
-      toast.textContent = mensaje;
+      toast.textContent = "✓ Cuenta de " + banco + " copiada";
       toast.classList.add("show");
 
       clearTimeout(window.toastTimeout);
