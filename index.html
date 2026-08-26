@@ -7,47 +7,154 @@
   <title>EMSAMTECH | Información bancaria</title>
 
   <meta property="og:title" content="EMSAMTECH | Información bancaria">
-  <meta property="og:description" content="Copia la cuenta rápidamente y realiza tu pago.">
-  <meta property="og:image" content="https://TUUSUARIO.github.io/emsamtech-pagos/preview.jpg">
-  <meta property="og:url" content="https://TUUSUARIO.github.io/emsamtech-pagos/">
+  <meta property="og:description" content="Consulta nuestras cuentas bancarias y realiza tu pago de forma rápida y segura.">
+  <meta property="og:image" content="https://emsamtech.github.io/emsamtech-pagos/preview.png">
+  <meta property="og:url" content="https://emsamtech.github.io/emsamtech-pagos/">
   <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EMSAMTECH | Información bancaria">
+  <meta name="twitter:description" content="Consulta nuestras cuentas bancarias y realiza tu pago de forma rápida y segura.">
+  <meta name="twitter:image" content="https://emsamtech.github.io/emsamtech-pagos/preview.png">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #111;
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #071525, #0b2944);
       color: white;
-      text-align: center;
-      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
     }
 
     .card {
-      max-width: 500px;
-      margin: auto;
-      background: #222;
-      padding: 30px;
-      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 30px 22px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(10px);
     }
 
-    a {
-      color: #57c785;
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      margin-bottom: 30px;
+      opacity: 0.8;
+    }
+
+    .bank {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .bank h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .bank p {
+      margin: 5px 0;
+      opacity: 0.85;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 12px;
+      border: none;
+      border-radius: 12px;
+      padding: 13px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      background: white;
+      color: #071525;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    .footer {
+      margin-top: 22px;
+      font-size: 13px;
+      opacity: 0.6;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="card">
-    <h1>EMSAMTECH</h1>
-    <p>Información bancaria oficial</p>
+  <div class="container">
+    <div class="card">
 
-    <h2>Cuenta bancaria</h2>
-    <p>0000000000</p>
+      <h1>EMSAMTECH</h1>
+      <p class="subtitle">Información bancaria oficial</p>
 
-    <p>Copia la cuenta y realiza tu pago.</p>
+      <div class="bank">
+        <h2>Banco Popular</h2>
+        <p>Cuenta: 0000000000</p>
+        <p>Titular: EMSAMTECH</p>
+
+        <button onclick="copiarCuenta('0000000000')">
+          Copiar cuenta
+        </button>
+      </div>
+
+      <div class="bank">
+        <h2>Scotiabank</h2>
+        <p>Cuenta: 0000000000</p>
+        <p>Titular: EMSAMTECH</p>
+
+        <button onclick="copiarCuenta('0000000000')">
+          Copiar cuenta
+        </button>
+      </div>
+
+      <div class="bank">
+        <h2>Qik</h2>
+        <p>Cuenta: 0000000000</p>
+        <p>Titular: EMSAMTECH</p>
+
+        <button onclick="copiarCuenta('0000000000')">
+          Copiar cuenta
+        </button>
+      </div>
+
+      <p class="footer">
+        Verifica siempre los datos antes de realizar el pago.
+      </p>
+
+    </div>
   </div>
+
+  <script>
+    function copiarCuenta(numero) {
+      navigator.clipboard.writeText(numero);
+      alert("Número de cuenta copiado");
+    }
+  </script>
 
 </body>
 </html>
