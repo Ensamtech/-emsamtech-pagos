@@ -6,7 +6,7 @@
 
   <title>ENSAMTECH | Información bancaria</title>
 
-  <!-- Open Graph para WhatsApp / Facebook -->
+  <!-- WhatsApp / Facebook -->
   <meta property="og:title" content="ENSAMTECH | Información bancaria">
   <meta property="og:description" content="Copia nuestros datos bancarios de forma rápida y segura.">
   <meta property="og:image" content="https://ensamtech.github.io/-emsamtech-pagos/preview.png">
@@ -17,13 +17,12 @@
   <meta property="og:url" content="https://ensamtech.github.io/-emsamtech-pagos/">
   <meta property="og:type" content="website">
 
-  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ENSAMTECH | Información bancaria">
   <meta name="twitter:description" content="Copia nuestros datos bancarios de forma rápida y segura.">
   <meta name="twitter:image" content="https://ensamtech.github.io/-emsamtech-pagos/preview.png">
 
-  <meta name="theme-color" content="#07192d">
+  <meta name="theme-color" content="#111111">
 
   <style>
     * {
@@ -31,15 +30,26 @@
       -webkit-tap-highlight-color: transparent;
     }
 
+    :root {
+      --red: #e31b23;
+      --red-dark: #b50f17;
+      --black: #111111;
+      --dark: #1c1c1e;
+      --gray: #6e6e73;
+      --light-gray: #f2f2f4;
+      --border: #e4e4e7;
+      --white: #ffffff;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       background:
-        radial-gradient(circle at top right, rgba(0, 135, 255, 0.18), transparent 35%),
-        linear-gradient(160deg, #05111f 0%, #081d32 50%, #071526 100%);
-      color: #ffffff;
-      padding: 25px 18px 40px;
+        radial-gradient(circle at top right, rgba(227, 27, 35, 0.08), transparent 32%),
+        linear-gradient(180deg, #f7f7f8 0%, #eeeeef 100%);
+      color: var(--black);
+      padding: 24px 16px 40px;
     }
 
     .container {
@@ -50,32 +60,39 @@
 
     .header {
       text-align: center;
-      margin: 15px 0 30px;
+      margin: 8px 0 25px;
     }
 
     .brand-logo {
-      width: 68px;
-      height: 68px;
-      margin: 0 auto 14px;
-      border-radius: 22px;
-      background: linear-gradient(145deg, #1d8dff, #0063c9);
+      width: 128px;
+      height: 128px;
+      margin: 0 auto 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 30px;
-      font-weight: 900;
-      box-shadow: 0 12px 35px rgba(0, 119, 255, 0.28);
+    }
+
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     .header h1 {
       margin: 0;
-      font-size: 30px;
-      letter-spacing: 1.2px;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+    }
+
+    .header h1 span {
+      color: var(--red);
     }
 
     .header p {
-      margin: 8px 0 0;
-      color: #8ea5ba;
+      margin: 6px 0 0;
+      color: var(--gray);
       font-size: 14px;
     }
 
@@ -83,23 +100,24 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      padding: 15px;
       margin-bottom: 22px;
-      padding: 15px 17px;
-      background: rgba(255, 255, 255, 0.055);
-      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 18px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
     }
 
     .security-icon {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       border-radius: 14px;
+      background: rgba(227,27,35,0.10);
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(28, 143, 255, 0.13);
-      font-size: 20px;
       flex-shrink: 0;
+      font-size: 20px;
     }
 
     .security strong {
@@ -110,45 +128,58 @@
 
     .security span {
       display: block;
-      color: #8499ad;
+      color: var(--gray);
       font-size: 12px;
-      line-height: 1.35;
+      line-height: 1.4;
     }
 
     .section-title {
-      margin: 0 0 14px;
-      font-size: 13px;
-      color: #8298ac;
+      margin: 0 0 12px;
+      font-size: 12px;
+      color: var(--gray);
       text-transform: uppercase;
-      letter-spacing: 1.4px;
+      letter-spacing: 1.3px;
+      font-weight: 700;
     }
 
     .accounts {
       display: grid;
-      gap: 15px;
+      gap: 14px;
     }
 
     .account-card {
-      padding: 20px;
+      background: var(--white);
+      border: 1px solid var(--border);
       border-radius: 22px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
-      backdrop-filter: blur(12px);
+      padding: 19px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.055);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .account-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--red);
     }
 
     .bank-header {
       display: flex;
       align-items: center;
       gap: 13px;
-      margin-bottom: 20px;
+      margin-bottom: 19px;
     }
 
     .bank-icon {
       width: 58px;
       height: 58px;
-      border-radius: 16px;
-      background: #ffffff;
+      border-radius: 15px;
+      background: #fff;
+      border: 1px solid #eeeeef;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -170,28 +201,31 @@
 
     .bank-info h2 {
       margin: 0;
-      font-size: 19px;
+      font-size: 18px;
+      color: var(--black);
     }
 
     .bank-info span {
       display: block;
-      margin-top: 3px;
-      color: #8196aa;
+      margin-top: 4px;
+      color: var(--gray);
       font-size: 12px;
     }
 
     .label {
-      font-size: 11px;
-      color: #71879b;
+      margin-bottom: 5px;
+      color: #8a8a8f;
+      font-size: 10px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: 5px;
     }
 
     .holder {
+      margin-bottom: 17px;
+      color: #333336;
       font-size: 14px;
-      margin-bottom: 18px;
-      color: #d9e3ec;
+      font-weight: 500;
     }
 
     .number-row {
@@ -203,56 +237,62 @@
     .account-number {
       flex: 1;
       min-width: 0;
-      font-size: 24px;
-      font-weight: 750;
-      letter-spacing: 1px;
+      color: var(--black);
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
       overflow-wrap: anywhere;
     }
 
     .copy-btn {
-      min-width: 92px;
+      min-width: 96px;
       height: 46px;
       padding: 0 15px;
       border: none;
       border-radius: 14px;
-      background: #ffffff;
-      color: #07192d;
-      font-weight: 700;
+      background: var(--black);
+      color: var(--white);
       font-size: 13px;
+      font-weight: 750;
       cursor: pointer;
-      transition: transform 0.15s ease;
+      transition: transform .15s ease, background .15s ease;
     }
 
     .copy-btn:active {
-      transform: scale(0.94);
+      transform: scale(.95);
+      background: var(--red);
     }
 
     .footer-card {
-      margin-top: 22px;
-      text-align: center;
+      margin-top: 21px;
       padding: 18px;
+      text-align: center;
+      background: #18181a;
+      color: #fff;
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.035);
-      border: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .footer-card strong {
       display: block;
-      font-size: 14px;
       margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .footer-card strong span {
+      color: #ff434b;
     }
 
     .footer-card p {
       margin: 0;
-      color: #758ca0;
+      color: #a9a9ad;
       font-size: 12px;
       line-height: 1.5;
     }
 
     .footer {
+      margin-top: 20px;
       text-align: center;
-      margin-top: 22px;
-      color: #536b80;
+      color: #8b8b90;
       font-size: 11px;
     }
 
@@ -261,16 +301,16 @@
       left: 50%;
       bottom: 25px;
       transform: translate(-50%, 25px);
-      background: #ffffff;
-      color: #07192d;
-      border-radius: 14px;
+      background: var(--black);
+      color: var(--white);
       padding: 12px 17px;
+      border-radius: 14px;
       font-size: 13px;
       font-weight: 750;
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 14px 40px rgba(0,0,0,.25);
       opacity: 0;
       pointer-events: none;
-      transition: 0.25s ease;
+      transition: .25s ease;
       white-space: nowrap;
       z-index: 999;
     }
@@ -281,12 +321,17 @@
     }
 
     @media (max-width: 370px) {
+      .brand-logo {
+        width: 112px;
+        height: 112px;
+      }
+
       .account-number {
         font-size: 20px;
       }
 
       .copy-btn {
-        min-width: 78px;
+        min-width: 82px;
         padding: 0 11px;
       }
 
@@ -307,23 +352,32 @@
   <div class="container">
 
     <header class="header">
-      <div class="brand-logo">E</div>
-      <h1>ENSAMTECH</h1>
+
+      <div class="brand-logo">
+        <img src="logo.png" alt="ENSAMTECH">
+      </div>
+
+      <h1>ENSAM<span>TECH</span></h1>
       <p>Información bancaria oficial</p>
+
     </header>
 
     <div class="security">
-      <div class="security-icon">🛡️</div>
+
+      <div class="security-icon">
+        🛡️
+      </div>
 
       <div>
         <strong>Transfiere con confianza</strong>
-        <span>
-          Copia los datos directamente para evitar errores al realizar tu transferencia.
-        </span>
+        <span>Copia los datos directamente para evitar errores al realizar tu transferencia.</span>
       </div>
+
     </div>
 
-    <p class="section-title">Selecciona una cuenta</p>
+    <p class="section-title">
+      Selecciona una cuenta
+    </p>
 
     <div class="accounts">
 
@@ -441,11 +495,13 @@
     </div>
 
     <div class="footer-card">
-      <strong>🔒 Datos oficiales de ENSAMTECH</strong>
+
+      <strong>🔒 Datos oficiales de <span>ENSAMTECH</span></strong>
 
       <p>
         Verifica siempre el nombre del titular antes de completar una transferencia.
       </p>
+
     </div>
 
     <div class="footer">
@@ -463,15 +519,16 @@
 
       try {
         await navigator.clipboard.writeText(numero);
-
       } catch (error) {
 
         const input = document.createElement("textarea");
+
         input.value = numero;
 
         document.body.appendChild(input);
 
         input.select();
+
         document.execCommand("copy");
 
         document.body.removeChild(input);
